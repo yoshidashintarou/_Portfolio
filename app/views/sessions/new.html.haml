@@ -1,0 +1,21 @@
+= render 'shared/flash_message'
+
+- if logged_in?
+  = current_user.email
+
+= form_tag sessions_path do
+  .field
+    = label_tag :email
+    = text_field_tag :email, params[:email]
+  .field
+    = label_tag :password
+    = password_field_tag :password
+  .field
+    = check_box_tag :remember_me, 1, params[:remember_me]
+    = label_tag :remember_me
+  .actions
+    = submit_tag "Log in"
+
+%h5
+  Forgot Password?
+= render 'password_resets/forgot_password_form'

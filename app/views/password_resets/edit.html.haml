@@ -1,0 +1,17 @@
+%h1
+  Choose a new password
+
+= form_for @user, url: password_reset_path(@token), html: { method: :put } do |f|
+  = render 'shared/error_messages', object: f.object
+
+  .field
+    = f.label :email
+    = @user.email
+  .field
+    = f.label :password
+    = f.password_field :password
+  .field
+    = f.label :password_confirmation
+    = f.password_field :password_confirmation
+  .actions
+    = f.submit

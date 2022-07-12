@@ -1,0 +1,15 @@
+Congratz,
+= @user.email
+
+%p
+  You have successfully activated your example.com account,
+  your username is:
+  = @user.email
+
+%p
+  To login to the site, just follow this link:
+  %br
+  = link_to @url, @url
+
+%p
+  Thanks for joining and have a great day!

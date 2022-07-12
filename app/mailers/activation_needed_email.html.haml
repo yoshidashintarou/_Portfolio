@@ -1,0 +1,18 @@
+%h3
+  Welcome!
+
+= @user.email
+
+%p
+  You have successfully signed up to example.com,
+  your username is:
+  %br
+  = @user.email
+
+%p
+  To login to the site, just follow this link:
+  %br
+  = link_to @url, @url
+
+%p
+  Thanks for joining and have a great day!
